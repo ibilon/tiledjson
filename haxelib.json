@@ -1,0 +1,13 @@
+{
+	"name": "tiledjson",
+	"url" : "https://github.com/ibilon/tiledjson/",
+	"license": "MIT",
+	"tags": ["tiled", "json", "map", "tilemap"],
+	"description": "Tiled map editor json format loader",
+	"version": "0.0.1",
+	"releasenote": "Initial release",
+	"contributors": ["_ibilon"],
+	"dependencies": {
+		"json2object": ""
+	}
+}
