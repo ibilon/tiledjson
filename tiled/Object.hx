@@ -3,7 +3,7 @@ package tiled;
 class Object
 {
 	/** Used to mark an object as an ellipse. **/
-	public var ellipse : Bool;
+	@:optional public var ellipse : Bool;
 
 	/** GID, only if object comes from a tile map. **/
 	@:optional public var gid : Int;
@@ -21,10 +21,10 @@ class Object
 	@:optional public var point : Bool;
 
 	/** A list of coordinates in pixels. **/
-	public var polygon : Array<Point>;
+	@:optional public var polygon : Array<Point>;
 
 	/** A list of coordinates in pixels. **/
-	public var polyline : Array<Point>;
+	@:optional public var polyline : Array<Point>;
 
 	/** **/
 	@:optional public var properties : Array<Property>;
@@ -36,7 +36,7 @@ class Object
 	@:optional public var template : String;
 
 	/** **/
-	public var text : ObjectText;
+	@:optional public var text : ObjectText;
 
 	/** Type field in editor. **/
 	public var type : String;

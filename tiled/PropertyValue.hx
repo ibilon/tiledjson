@@ -1,13 +1,13 @@
 package tiled;
 
-abstract PropertyValue (String)
+abstract PropertyValue (String) from String
 {
 	function new (s:String)
 	{
 		this = s;
 	}
 
-	@:from static function fromInt (f:Float)
+	@:from static function fromFloat (f:Float)
 	{
 		return new PropertyValue(Std.string(f));
 	}

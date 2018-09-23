@@ -1,0 +1,19 @@
+{
+ "columns":19,
+ "firstgid":1,
+ "image":"..\/image\/fishbaddie_parts.png",
+ "imageheight":480,
+ "imagewidth":640,
+ "margin":3,
+ "name":"",
+ "properties":[
+   {
+     "name":"myProperty1",
+     "type":"string",
+     "value":"myProperty1_value"
+   }],
+ "spacing":1,
+ "tilecount":266,
+ "tileheight":32,
+ "tilewidth":32
+}

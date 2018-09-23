@@ -1,0 +1,4 @@
+-lib json2object
+-lib utest
+-main tests.Main
+--interp

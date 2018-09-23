@@ -1,0 +1,34 @@
+{
+  "tiles":[
+    {
+      "id":0,
+      "properties":[
+        {
+          "name":"myProperty1",
+          "type":"string",
+          "value":"myProperty1_value"
+        }],
+      "terrain":[0, 0, 0, 0]
+    },
+    {
+      "id":11,
+      "properties":[
+        {
+          "name":"myProperty2",
+          "type":"string",
+          "value":"myProperty2_value"
+        }],
+      "terrain":[0, 1, 0, 1]
+    },
+    {
+      "id":12,
+      "properties":[
+        {
+          "name":"myProperty3",
+          "type":"string",
+          "value":"myProperty3_value"
+        }],
+      "terrain":[1, 1, 1, 1]
+    }
+  ]
+}

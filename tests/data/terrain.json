@@ -1,0 +1,14 @@
+[
+  {
+    "name":"ground",
+    "tile":0
+  },
+  {
+    "name":"chasm",
+    "tile":12
+  },
+  {
+    "name":"cliff",
+    "tile":36
+  }
+]

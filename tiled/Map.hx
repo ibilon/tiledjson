@@ -14,13 +14,13 @@ class Map
 	@:optional public var hexsidelength : Int;
 
 	/** Whether the map has infinite dimensions. **/
-	public var infinite : Bool;
+	@:optional public var infinite : Bool;
 
 	/** **/
 	public var layers : Array<Layer>;
 
 	/** Stores the next available ID for new layers. This number is stored to prevent reuse of the same ID after layers have been removed. **/
-	public var nextlayerid : Int;
+	@:optional public var nextlayerid : Int;
 
 	/** Stores the next available ID for new objects. This number is stored to prevent reuse of the same ID after objects have been removed. **/
 	public var nextobjectid : Int;
@@ -53,7 +53,7 @@ class Map
 	public var tilewidth : Int;
 
 	/** **/
-	public var type : MapType;
+	@:optional public var type : MapType;
 
 	/** The JSON format version. **/
 	public var version : Float; //TODO warn if value is not known that parsing may not work

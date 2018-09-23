@@ -11,4 +11,5 @@ Use `tiled.Map.load` to load your map.
 ## License
 
 Tiled is licensed GPL, BSD or Apache, see <https://github.com/bjorn/tiled>.
+
 This library is licensed MIT, see <license.md>.

@@ -22,7 +22,7 @@ class Layer
 	public var height : Int;
 
 	/** Incremental id - unique across all layers. **/
-	public var id : Int;
+	@:optional public var id : Int;
 
 	/** Image used by this layer, image layer only. **/
 	@:optional public var image : String;
