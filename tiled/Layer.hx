@@ -7,7 +7,7 @@ class Layer
 	@:optional public var chunks : Array<Chunk>;
 
 	/** Tile layer only. **/
-	@:optional public var compression : LayerCompression;
+	@:optional @:default(None) public var compression : LayerCompression;
 
 	/** Array of UInt (GIDs) or base64-encoded data, tile layer only. **/
 	@:optional public var data : LayerData;
@@ -22,7 +22,7 @@ class Layer
 	public var height : Int;
 
 	/** Incremental id - unique across all layers. **/
-	@:optional public var id : Int;
+	@:optional @:default(-1) public var id : Int;
 
 	/** Image used by this layer, image layer only. **/
 	@:optional public var image : String;
@@ -37,16 +37,16 @@ class Layer
 	@:optional public var objects : Array<Object>;
 
 	/** Horizontal layer offset in pixels, default: 0. **/
-	@:optional public var offsetx : Int;
+	@:optional @:default(0) public var offsetx : Int;
 
 	/** Vertical layer offset in pixels, default: 0. **/
-	@:optional public var offsety : Int;
+	@:optional @:default(0) public var offsety : Int;
 
 	/** Value between 0 and 1. **/
 	public var opacity : Float;
 
 	/** **/
-	@:optional public var properties : Array<Property>;
+	@:optional @:default([]) public var properties : Array<Property>;
 
 	/** Hex-formatted color (#RRGGBB), image layer only. **/
 	@:optional public var transparentcolor : Color;

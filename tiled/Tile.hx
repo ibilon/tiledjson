@@ -26,7 +26,7 @@ class Tile
 	@:optional public var objectgroup : Layer;
 
 	/** **/
-	@:optional public var properties : Array<Property>;
+	@:optional @:default([]) public var properties : Array<Property>;
 
 	/** Index of terrain for each corner of tile. **/
 	public var terrain : Array<Int>;

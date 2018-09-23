@@ -4,6 +4,8 @@ import json2object.JsonParser;
 
 class Map
 {
+	public static final SUPPORTED_VERSION = 1.2;
+
 	/** Hex-formatted color. (#RRGGBB or #AARRGGBB) **/
 	@:optional public var backgroundcolor : Color;
 
@@ -14,13 +16,13 @@ class Map
 	@:optional public var hexsidelength : Int;
 
 	/** Whether the map has infinite dimensions. **/
-	@:optional public var infinite : Bool;
+	@:optional @:default(false) public var infinite : Bool;
 
 	/** **/
 	public var layers : Array<Layer>;
 
 	/** Stores the next available ID for new layers. This number is stored to prevent reuse of the same ID after layers have been removed. **/
-	@:optional public var nextlayerid : Int;
+	@:optional @:default(-1) public var nextlayerid : Int;
 
 	/** Stores the next available ID for new objects. This number is stored to prevent reuse of the same ID after objects have been removed. **/
 	public var nextobjectid : Int;
@@ -29,7 +31,7 @@ class Map
 	public var orientation : MapOrientation;
 
 	/** **/
-	@:optional public var properties : Array<Property>;
+	@:optional @:default([]) public var properties : Array<Property>;
 
 	/** The order in which tiles on tile layers are rendered, orthogonal maps only. In all cases, the map is drawn row-by-row. **/
 	@:optional public var renderorder : MapRenderOrder;
@@ -71,6 +73,11 @@ class Map
 		//TODO deal more with data
 		var parser = new JsonParser<Map>();
 		var data = parser.fromJson(content, filename);
+
+		if (data.version != SUPPORTED_VERSION)
+		{
+			trace('Parser made for version ${SUPPORTED_VERSION} of maps, file is ${data.version}');
+		}
 
 		if (parser.errors.length > 0 && strictMode)
 		{

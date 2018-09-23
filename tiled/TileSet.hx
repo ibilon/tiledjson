@@ -27,13 +27,13 @@ class TileSet
 	public var name : String;
 
 	/** **/
-	@:optional public var properties : Array<Property>;
+	@:optional @:default([]) public var properties : Array<Property>;
 
 	/** Spacing between adjacent tiles in image in pixels. **/
 	public var spacing : Int;
 
 	/** **/
-	@:optional public var terrains : Array<Terrain>;
+	@:optional @:default([]) public var terrains : Array<Terrain>;
 
 	/** The number of tiles in this tileset. **/
 	public var tilecount : Int;
@@ -42,10 +42,10 @@ class TileSet
 	public var tileheight : Int;
 
 	/** **/
-	@:optional public var tileoffset : Point;
+	@:optional @:default(new tiled.Point()) public var tileoffset : Point;
 
 	/** **/
-	@:optional public var tiles : Array<Tile>;
+	@:optional @:default([]) public var tiles : Array<Tile>;
 
 	/** Maximum width of tiles in this set. **/
 	public var tilewidth : Int;

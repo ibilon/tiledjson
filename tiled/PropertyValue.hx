@@ -1,5 +1,6 @@
 package tiled;
 
+// todo typed extractor
 abstract PropertyValue (String) from String
 {
 	function new (s:String)

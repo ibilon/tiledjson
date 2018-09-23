@@ -12,9 +12,11 @@ class MapTest
 
 	public function test ()
 	{
+		var content = File.getContent(FILE);
 		var parser = new JsonParser<tiled.Map>();
-		var data = parser.fromJson(File.getContent(FILE), FILE);
+		var data = parser.fromJson(content, FILE);
 
 		Assert.equals(0, parser.errors.length);
+		Assert.equals(tiled.Map.SUPPORTED_VERSION, data.version);
 	}
 }

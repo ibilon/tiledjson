@@ -27,7 +27,7 @@ class Object
 	@:optional public var polyline : Array<Point>;
 
 	/** **/
-	@:optional public var properties : Array<Property>;
+	@:optional @:default([]) public var properties : Array<Property>;
 
 	/** Angle in degrees clockwise. **/
 	public var rotation : Float;
